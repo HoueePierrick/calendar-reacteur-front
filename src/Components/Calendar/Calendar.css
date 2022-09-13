@@ -1,0 +1,38 @@
+.calendar {
+    width: 400px;
+    height: 400px;
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    padding: none;
+  }
+  
+  .month {
+    border: 1px blue solid;
+    width: 100%;
+    margin: none;
+    position: relative;
+    color: grey;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .days {
+    border: 1px blue solid;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+  }
+
+.arrow {
+    margin: 0px 10px;
+}
+
+.dayshort {
+    border: 1px red solid;
+    width: 20px;
+    text-align: center;
+}
