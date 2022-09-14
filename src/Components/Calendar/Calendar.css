@@ -53,12 +53,13 @@
 }
 
 .event-form {
-  border: 1px red solid;
+  border: 1px black solid;
   padding: 10px 10px;
   width: 400px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  border-radius: 10px;
 }
 
 .form-title {
@@ -67,5 +68,75 @@
   justify-content: center;
   color: grey;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.event-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.event-title, .event-desc {
+  border-radius: 5px;
+  border: 1px grey solid;
+  height: 20px;
+  padding: 3px 5px;
+  font-size: 14px;
+  color: grey;
+}
+
+.full-time {
+  display: flex;
+}
+
+.num-contain {
+  border: 1px grey solid;
+  border-radius: 10px;
+  width: 40px;
+}
+
+.timer {
+  border: none;
+  width: 80%;
+  margin: 3px 0px;
+  margin-left: 3px;
+  background-color: transparent;
+  display: flex;
+  color: gray
+}
+
+.h {
+  margin: 3px 5px;
+}
+
+.timer:focus {
+  outline-width: 0;
+}
+
+.event-desc {
+  height: 50px;
+  vertical-align: text-top;
+}
+
+.event-title:focus, .event-desc:focus {
+  outline-width: 0;
+}
+
+.sumbit-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sumbit, .submit-red {
+  margin-top: 15px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: lightseagreen;
+  width: 200px;
+  font-size: 18px;
+  cursor: pointer;
 }

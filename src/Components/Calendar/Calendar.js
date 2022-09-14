@@ -13,11 +13,15 @@ const Calendar = (props) => {
     const [viewForm, setViewForm] = useState(false)
     const [eventDate, setEventDate] = useState([])
     const [eventTitle, setEventTitle] = useState("")
-    const [hour, setEventHour] = useState("")
-    const [minute, setEventMinute] = useState("")
+    const [eventHour, setEventHour] = useState("")
+    const [eventMinute, setEventMinute] = useState("")
     const [eventDescription, setEventDescription] = useState("")
 
     useEffect(() => {setMonthDays(MonthDays(todaydate))}, [todaydate])
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+    }
 
     return (
         <div className="container">
@@ -51,13 +55,37 @@ const Calendar = (props) => {
                 })}
             </div>
             {viewForm && 
-                <form className="event-form">
+                <form className="event-form" onSubmit={handleSubmit}>
                     <div className="form-title">
                         <span>Create an event for {textDate(eventDate)}</span>
                     </div>
-                    <label for="event-title" className="event-label">Event title</label>
+                    <label for="event-title" className="event-label">Event title :</label>
                     <input type="text" id="event-title" placeholder="Event's title"
-                    value={eventTitle} className="event-title"></input>
+                    value={eventTitle} className="event-title" onChange={(e) => {
+                        setEventTitle(e.target.value)
+                    }}></input>
+                    <span className="event-label">Event time :</span>
+                    <div className="full-time">
+                        <div className="num-contain">
+                            <input type="number" placeholder="00" value={eventHour} 
+                            className="timer" onChange={(e) => {if(e.target.value >= 0) {if(e.target.value < 10) {
+                                setEventHour("0" + e.target.value)} else {setEventHour(e.target.value)}}}}></input>
+                        </div>
+                        <span className="h">h</span>
+                        <div className="num-contain">
+                            <input type="number" placeholder="00" value={eventMinute} 
+                            className="timer" onChange={(e) => {if(e.target.value >= 0) {if(e.target.value < 10) {
+                                setEventMinute("0" + e.target.value)} else {setEventMinute(e.target.value)}}}}></input>
+                        </div>
+                    </div>
+                    <label for="event-title" className="event-label">Event description :</label>
+                    <textarea id="event-title" placeholder="Event's description" rows="3"
+                    value={eventDescription} className="event-desc" onChange={(e) => {
+                        setEventDescription(e.target.value)
+                    }}></textarea>
+                    <div className="sumbit-div">
+                        <button className="sumbit">Sumbit</button>
+                    </div>
                 </form>
             }
         </div>
