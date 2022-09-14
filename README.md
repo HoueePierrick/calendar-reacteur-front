@@ -1,10 +1,8 @@
 TO DO LIST
 
 Front-end
-0- Password validation
-1- Create sign-up modal
-2- Manage tokens (waiting for back)
-3- Be able to edit events (waiting for back)
+1- Manage tokens (waiting for back)
+2- Be able to edit events (waiting for back)
 
 
 Full-stack

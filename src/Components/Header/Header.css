@@ -47,10 +47,6 @@
     border-radius: 20px;
     box-sizing: border-box;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
     z-index: 3;
 }
 
@@ -59,8 +55,6 @@
     font-size: 36px;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
-    margin-top: 10px;
     width: 100%;
     height: 40px;
 }
@@ -77,10 +71,14 @@
 .form {
     margin: none;
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
     position: relative;
-    top: -70px;
-    height: 200px;
+    max-height: 80%;
+    margin-top: 10px;
 }
 
 .modal-label, .modal-input {
@@ -104,8 +102,6 @@
 
 .switch, .switchback {
     width: 100%;
-    position: relative;
-    top: -100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,8 +132,65 @@
 
 .password-manager {
     height: 35px;
+    width: 100%;
 }
 
 .submit-red {
     background-color: lightcoral;
+}
+
+.redmessage {
+    color: red;
+    font-size: 14px;
+}
+
+.fullname {
+    font-size: 18px;
+    margin-top: 10px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: calc(100% - 5px);
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.subname {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.small-label, .small-input {
+    margin-right: 5px;
+    height: 20px;
+    height: 100%;
+}
+
+.small-label {
+    padding-top: 3px;
+}
+
+.small-input {
+    padding-left: 5px;
+}
+
+.checkboxes {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.full-checkbox {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.checking {
+    margin-right: 5px;
+}
+
+#create-email {
+    margin-bottom: 5px;
 }
