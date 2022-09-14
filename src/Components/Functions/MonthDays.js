@@ -14,7 +14,7 @@ const MonthDays = (array) => {
 
     for(let j = 0; j <= 6; j++) {
         if(j < firstDay) {
-            weekOne.push("-")
+            weekOne.push(" ")
         }
     }
 
@@ -33,10 +33,16 @@ const MonthDays = (array) => {
             week.push(i)
         }
         if(i === monthlength) {
+            for(let i = week.length; i < 7; i++) {
+                week.push(" ")
+            }
             result.push(week)
         }
     }
-    console.log(result)
+    // console.log(result)
+    return result;
 }
+
+// MonthDays([14, 09, 2022])
 
 export default MonthDays

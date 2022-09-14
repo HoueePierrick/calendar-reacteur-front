@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="App">
         <h1>My Calendar</h1>
-        <p>{todaydate}</p>
         <Calendar todaydate={todaydate} setTodaydate={setTodaydate}></Calendar>
         <h2>Click on a day to add an event.</h2>
         <hr />

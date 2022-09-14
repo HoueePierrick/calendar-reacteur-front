@@ -1,14 +1,17 @@
+.container {
+  display: flex;
+}
+
 .calendar {
     width: 400px;
-    height: 400px;
-    border: 1px red solid;
     display: flex;
     flex-direction: column;
     padding: none;
+    margin-bottom: 30px;
+    margin-right: 20px;
   }
   
   .month {
-    border: 1px blue solid;
     width: 100%;
     margin: none;
     position: relative;
@@ -19,20 +22,50 @@
   }
   
   .days {
-    border: 1px blue solid;
     margin-top: 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: grey;
+    margin-bottom: 30px;
   }
 
 .arrow {
     margin: 0px 10px;
 }
 
-.dayshort {
-    border: 1px red solid;
+.dayshort, .daycal {
     width: 20px;
     text-align: center;
+    display: block;
+}
+
+.week-details {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.daycal:hover {
+  background-color: grey;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.event-form {
+  border: 1px red solid;
+  padding: 10px 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
