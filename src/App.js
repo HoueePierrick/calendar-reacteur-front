@@ -16,10 +16,11 @@ today = dd + '/' + mm + '/' + yyyy;
 
 function App() {
   const [todaydate, setTodaydate] = useState([dd, mm, yyyy])
+  const [token, setToken] = useState("")
 
   return (
     <>
-      <Header></Header>
+      <Header token={token} setToken={setToken}></Header>
       <div className="App">
           <h1>My Calendar</h1>
           <Calendar todaydate={todaydate} setTodaydate={setTodaydate}></Calendar>

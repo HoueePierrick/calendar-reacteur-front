@@ -77,7 +77,12 @@ const PasswordCheck = (str) => {
             CapLets = CapLets + 1;
         }
     }
-    if(str.length < 12) {
+    if(str.length === 0) {
+        message = "Please enter a password";
+        result.push(correct);
+        result.push(message);
+        return result;
+    } else if(str.length < 12) {
         message = "Your password isn't long enough - it should be at least 12 characters long";
         result.push(correct);
         result.push(message);
